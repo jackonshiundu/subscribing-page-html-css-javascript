@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #f24438;
+  display: grid;
+  place-items: center;
+  font-family: cursive;
+  line-height: 1.5;
+}
+body button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: cursive;
+  transition: all 300ms ease;
+}
+body button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+body .modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  -webkit-animation: openSubCard 1s forwards;
+          animation: openSubCard 1s forwards;
+  /*Opninng the subscription card animation*/
+}
+body .modal .card {
+  background: white;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  max-width: 1rem 0;
+}
+body .modal .card .fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+body .modal .card .brand {
+  width: 30rem;
+}
+body .modal .card .brand img {
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  body .modal .card .brand {
+    width: 7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+body .modal .card .info h2 {
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 600px) {
+  body .modal .card .info h2 {
+    margin-bottom: 1rem;
+  }
+}
+body .modal .card .info form {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .modal .card .info form input[type=email] {
+  background: #eee;
+  width: 100%;
+  padding: 1rem;
+}
+@media screen and (max-width: 600px) {
+  body .modal .card .info form input[type=email]::-moz-placeholder {
+    text-align: center;
+  }
+  body .modal .card .info form input[type=email]:-ms-input-placeholder {
+    text-align: center;
+  }
+  body .modal .card .info form input[type=email]::placeholder {
+    text-align: center;
+  }
+}
+body .modal .card .info form input[type=submit] {
+  background: #f24438;
+  color: #eee;
+  padding: 0 1.6rem;
+}
+@media screen and (max-width: 600px) {
+  body .modal .card .info form input[type=submit] {
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 0.6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .modal .card .info form {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .modal .card {
+    flex-direction: column;
+    width: 80vh;
+    text-align: center;
+  }
+}
+@-webkit-keyframes openSubCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes openSubCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
